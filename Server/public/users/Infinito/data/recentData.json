@@ -1,0 +1,25 @@
+{
+  "title": "recent-data",
+  "projects": [
+    {
+      "id": "project-id-1",
+      "lastEdit": "5 Sept 2021",
+      "name": "Doggos doing zoomies",
+      "thumbnail": "http://localhost:5000/users/Infinito/thumbnails/project-id-1-thumbnail.jpeg"
+    }
+  ],
+  "brands": [
+    {
+      "id": "brand-id-1",
+      "files": "1 Sept 2021",
+      "name": "Infinito",
+      "thumbnail": "http://localhost:5000/users/Infinito/thumbnails/project-id-1-thumbnail.jpeg"
+    },
+    {
+      "id": "brand-id-2",
+      "files": "3 Sept 2021",
+      "name": "Infinito",
+      "thumbnail": "http://localhost:5000/users/Infinito/thumbnails/project-id-2-thumbnail.jpeg"
+    }
+  ]
+}

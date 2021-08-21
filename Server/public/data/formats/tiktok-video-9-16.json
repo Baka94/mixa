@@ -1,0 +1,11 @@
+{
+    "id" : "tiktok-video-9-16",
+    "name" : "TikTok Video",
+    "aspect-rateo": "9:16",
+    "details":"Portrait",
+    "thumbnail":"",
+    "icon": "tiktok",
+    "cateogry": ["video", "social", "portrait"],
+    "baseX" : 1080,
+    "baseY": 1920
+}

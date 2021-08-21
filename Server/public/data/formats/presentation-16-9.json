@@ -1,0 +1,11 @@
+{
+    "id" : "presentation-16-9",
+    "name" : "Presentation Standard",
+    "aspect-rateo": "16:9",
+    "details":"Landscape",
+    "thumbnail": "",
+    "icon": "presentation",
+    "cateogry": ["presentation", "business", "landscape", "professional"],
+    "baseX" : 1920,
+    "baseY": 1080
+}

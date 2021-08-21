@@ -1,0 +1,350 @@
+@import "../base/config"
+    
+
+// Hero grid section
+
+.heroSection
+    position: relative
+    width: 100%
+    background: conic-gradient(from 130.84deg at 23.5% 22.85%, #FF97FF 0deg, #00A3FF 181.87deg, #FF97FF 360deg)
+    display: flex
+    justify-content: center
+    overflow: hidden
+    min-height: 200vh
+    padding-top: 85px
+    @include tablet-up
+        min-height: 100vh
+    & video
+        position: absolute
+        left: 0
+        top: 0
+        pointer-events: none
+        opacity: 0.5
+        mix-blend-mode: color-dodge
+        filter: blur(12px)
+        height: 100vh
+        @include tablet-up
+            height: auto
+            width: 100%
+
+   
+.hero-grid
+    z-index: 1
+    width: 100%
+    max-width: $tablet
+    @extend .padding-basic
+    margin: 6rem 0
+    display: flex
+    flex-direction: column
+    @include mobile-up
+        
+    @include tablet-up
+        display: grid
+        grid-template-columns: 2fr 1fr
+        grid-template-rows: 1fr
+    @include tablet-up
+        
+    @include desktop-up
+
+.hero-info-left
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    text-align: center
+    & .buttons
+        display: flex
+        flex-direction: column
+        justify-content: center
+        width: 100%
+        & .button
+            margin-bottom: $spacing-s
+    @include mobile-up
+        & .buttons
+            width: auto
+            display: flex
+            flex-direction: row
+            & .button
+                margin-right: $spacing-s
+    @include tablet-up
+        display: block
+        text-align: left
+        margin-right: auto
+        & .text
+            max-width: 400px
+        & .buttons
+            justify-content: left
+
+.hero-right 
+    position: relative
+    width: 100%
+    height: 100vh
+    perspective: 2000px
+    & .hero-image
+        position: absolute
+        left: 0%
+        top: 50%
+        width: 160%
+        transform: rotate3d(0.2, -1, 0.2, 20deg)
+        @include tablet-up
+            top: 20%
+            left: -30%
+            width: 300%
+            transform: rotate3d(0.2, -1, 0.2, 20deg) 
+        
+// Make Anything Section
+
+.make-anything-section
+    width: 100%
+    display: flex
+    flex-direction: column
+    align-items: center
+    margin: 6rem 0
+    & .title-container
+        @extend .padding-basic
+        width: 100%
+        max-width: $tablet
+        & .title
+            font-weight: 700
+    & .options-container
+        max-width: $desktop-l
+        position: relative
+        display: flex
+        justify-content: center
+        width: 100%
+        & .options-slider
+            width: 100%
+            overflow-x: scroll
+            overflow-y: hidden
+            display: flex
+            flex-direction: row
+            scroll-behavior: smooth
+            &:first-child
+                padding-left: $spacing-m
+            &::-webkit-scrollbar
+                display: none
+            & .option
+                cursor: pointer
+                font-weight: 700
+                color: $grey-light
+                margin-right: $spacing-m
+            & .option-selected
+                cursor: pointer
+                font-weight: 700
+                margin-right: $spacing-m
+    & .formats-slider
+        width: 100%
+        max-width: $desktop-l
+        padding: $spacing-m
+        overflow-x: scroll
+        @include desktop-up
+        &::-webkit-scrollbar
+                display: none
+        & .formats
+            width: 100%
+            display: flex
+            flex-direction: row
+
+// Faders left & right
+
+.fader
+    position: absolute
+    top:0
+    height: 100%
+    width: 8%
+    z-index: 1
+
+.fader-left
+    @extend .fader
+    left: 0
+    background: linear-gradient(90deg,$light1,hsla(0,0%,100%,0))
+    .darkmode &
+        background: linear-gradient(90deg,$dark1,hsla(0,0%,100%,0))
+
+.fader-right
+    @extend .fader
+    right: 0
+    background: linear-gradient(90deg,hsla(0,0%,100%,0), $light1)
+    .darkmode &
+        background: linear-gradient(90deg,hsla(0,0%,100%,0), $dark1)
+
+
+// Media format card
+
+
+.media-format-card
+    border-radius: $spacing-s
+    box-shadow: 0px 6px 32px rgba(0, 0, 0, 0.15)
+    transition: all .3s ease
+    cursor: pointer
+    display: flex
+    flex-direction: column
+    justify-content: flex-end
+    min-width: 250px
+    @include tablet-up
+        min-width: 300px
+    overflow: hidden
+    &:hover
+        transform: translateY(-$spacing-xxs)
+        box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.15)
+    & .illustration
+        position: relative
+        width: 100%
+        height: 100%
+        min-height: 250px
+        @include tablet-up
+            min-height: 300px
+        overflow: hidden
+        display: flex
+        align-items: center
+        justify-content: center
+        img
+            width: 70%
+            z-index: 1
+
+    & .info-box
+        padding: $spacing-m
+        @include tablet-up
+            padding: $spacing-m
+        display: flex
+        flex-direction: row
+        align-items: center
+        background-color: $light1
+        height: 100%
+        & .icon
+            width: $dimension-xxs
+            height: $dimension-xxs
+        & .info
+            display: flex
+            flex-direction: column
+            margin-left: $spacing-s
+        & .title
+            margin-top: $spacing-xxs
+            font-weight: 600
+            white-space: nowrap
+        & .info-single
+            display: flex
+            flex-direction: row
+            align-items: center
+            margin-left: $spacing-s
+            & .title
+                margin-top: 0
+            & .arrow
+                margin-left: $spacing-s
+                width: $spacing-s
+                transition: margin $transition-s ease
+    &:hover .info-box .arrow
+        margin-left: $spacing-m
+        width: $spacing-s
+        
+
+// Presentation Section
+
+.presentation-section
+    width: 100%
+    display: flex
+    position: relative
+    justify-content: center
+    background-color: $accent1
+    @extend .padding-basic
+    margin: 6rem 0
+    & .content
+        box-sizing: border-box
+        width: 100%
+        height: 100%
+        position: relative
+        background-color: $accent1
+        max-width: $desktop-l
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        border-radius: $spacing-l
+        overflow: hidden
+        & .title 
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+            width: $mobile
+            margin: 6rem 0
+            & *
+                font-weight: 700
+                margin-top: -$spacing-xs
+            & .title-bottom
+                margin-top: -$spacing-s
+                margin-left: $spacing-m
+
+        & .illustration
+            margin:  0 0 6rem 0
+            & .hero-image
+                width: $tablet
+        & .bottom
+            margin: 6rem $spacing-s
+            max-width: $mobile-l
+            padding-bottom: 6rem
+        & video
+            filter: blur(12px)
+
+
+
+
+// New general Styles
+
+.full-size-video-container
+    position: absolute
+    top: 0
+    bottom: 0
+    width: 100%
+    height: 100%
+    overflow: hidden
+    & video
+        position: absolute
+        min-width: 100% 
+        min-height: 100%
+        width: auto
+        height: auto
+        pointer-events: none
+        opacity: 0.2
+
+
+.bottom-text
+    margin-top: $spacing-s
+    cursor: point
+    width: 100%
+    max-width: $tablet
+    @extend .padding-basic
+    & .button
+        margin-top: $spacing-m
+        display: flex
+        flex-direction: row
+        align-items: center
+        &:hover .arrow
+            margin-left: $spacing-s
+            width: $spacing-s
+    & .arrow
+        margin-left: $spacing-xs
+        width: $spacing-s
+        transition: margin $transition-s ease
+
+.bottom-text-center
+    margin-top: $spacing-s
+    cursor: point
+    width: 100%
+    max-width: $tablet
+    @extend .padding-basic
+    & .text
+        text-align: center
+    & .button
+        margin-top: $spacing-m
+        display: flex
+        flex-direction: row
+        align-items: center
+        justify-content: center
+        &:hover .arrow
+            margin-left: $spacing-s
+            width: $spacing-s
+    & .arrow
+        margin-left: $spacing-xs
+        width: $spacing-s
+        transition: margin $transition-s ease

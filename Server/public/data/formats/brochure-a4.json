@@ -1,0 +1,11 @@
+{
+    "id" : "brochure-a4",
+    "name" : "Brochure",
+    "aspect-rateo": "A4",
+    "details": "29.7 x 21 cm",
+    "thumbnail":"",
+    "icon": "illustration",
+    "cateogry": ["document", "office", "print", "advertisement"],
+    "baseX" : 793.70,
+    "baseY": 1122.52
+}

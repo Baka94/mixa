@@ -1,0 +1,11 @@
+{
+    "id" : "letter-a4",
+    "name" : "Letter",
+    "aspect-rateo": "A4",
+    "details": "21 x 29.7 cm",
+    "thumbnail":"",
+    "icon": "document",
+    "cateogry": ["document", "office", "print"],
+    "baseX" : 793.70,
+    "baseY": 1122.52
+}

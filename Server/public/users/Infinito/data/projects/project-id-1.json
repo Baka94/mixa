@@ -1,0 +1,16 @@
+{
+    "id": "project-id-1",
+    "formatId": "tiktok-video-9-16",
+    "name": "Doggos doing zoomies",
+    "thumbanil": "http://localhost:5000/users/Infinito/thumbnails/project-id-1-thumbnail.jpeg",
+    "seqs": [
+      {
+        "position": 0,
+        "id": "id-clip-3",
+        "title": "Hungry doggos",
+        "src": "https://socialflowagency.com/wp-content/uploads/2021/04/Dog-Resting-On-Grass-Field.mp4",
+        "start": 4.50,
+        "end": 16.80
+      }
+    ]
+  }

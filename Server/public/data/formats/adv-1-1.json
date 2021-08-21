@@ -1,0 +1,11 @@
+{
+    "id" : "adv-1-1",
+    "name" : "Advertisement Graphic",
+    "aspect-rateo": "1:1",
+    "details": "Square",
+    "thumbnail": "",
+    "icon": "advertisement",
+    "cateogry": ["advertisement", "square"],
+    "baseX" : 1080,
+    "baseY": 1080
+}

@@ -1,0 +1,11 @@
+{
+    "id" : "youtube-video-16-9",
+    "name" : "Youtube Video",
+    "aspect-rateo": "16:9",
+    "details":"Landscape",
+    "thumbnail":"",
+    "icon": "youtube",
+    "cateogry": ["video", "social", "landscape"],
+    "baseX" : 1920,
+    "baseY": 1080
+}

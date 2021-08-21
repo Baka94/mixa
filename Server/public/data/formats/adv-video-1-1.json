@@ -1,0 +1,11 @@
+{
+    "id" : "adv-video-1-1",
+    "name" : "Advertisement Video",
+    "aspect-rateo": "1:1",
+    "details": "Square",
+    "thumbnail": "",
+    "icon": "advertisement",
+    "cateogry": ["advertisement", "square", "video"],
+    "baseX" : 1080,
+    "baseY": 1080
+}

@@ -1,0 +1,11 @@
+{
+    "id" : "postcard-a6",
+    "name" : "Postcard",
+    "aspect-rateo": "A6",
+    "details": "10.5 x 14.8 cm",
+    "thumbnail": "",
+    "icon": "illustraton",
+    "cateogry": ["document", "office", "print", "illustration"],
+    "baseX" : 396.85,
+    "baseY": 559.37
+}

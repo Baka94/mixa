@@ -1,0 +1,11 @@
+{
+    "id" : "poster-a1",
+    "name" : "Poster",
+    "aspect-rateo": "A1",
+    "details": "59.4 x 84.1 cm",
+    "thumbnail":"",
+    "icon": "illustration",
+    "cateogry": ["illustration", "advertisement", "print"],
+    "baseX" : 2245.04,
+    "baseY": 3178.58
+}

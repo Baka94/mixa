@@ -1,0 +1,230 @@
+@import "../base/config"
+
+
+
+
+
+.mixa-container
+    width: 100vw
+    height: 100vh
+    display: flex
+    justify-content: center
+
+.studio-layout
+    width: 100%
+    height: 100%
+    display: flex
+    max-width: $larger-screen
+    @include tablet-up
+        display: grid
+        grid-template-columns: 85px 1fr
+        grid-template-rows: 1fr
+
+.web-layout
+    width: 100%
+    height: 100%
+    display: flex
+
+
+.main-page
+    overflow-x: hidden
+    overflow-y: scroll
+    width: 100%
+    height: 100%
+
+
+.studio-menu
+    position: absolute
+    bottom: 0
+    z-index: 5
+    @include tablet-up
+        position: relative
+    
+
+.studio-menu-desktop
+    display: none
+    @include tablet-up
+        width: 100%
+        height: 100%
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: space-between
+        border-right: 1px solid $shadow-light
+        padding: $spacing-s 0
+    & .icons-group
+        width: 100%
+        display: flex
+        flex-direction: column
+        align-items: center
+    & .item
+        margin-bottom: $spacing-m
+        cursor: pointer
+    & .logo
+        width: $spacing-m
+        height: $spacing-m
+        svg
+            fill: $accent1
+            stroke: $accent1
+
+
+.studio-menu-mobile
+    width: 100vw
+    min-height: 48px
+    padding: $spacing-xs
+    background: $light1
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: space-around
+    border-top: 1px solid $shadow-light
+    @include tablet-up
+        display: none
+    .item
+        width: 3rem
+        height: 3rem
+        display: flex
+        align-items: center
+        justify-content: center
+
+
+    
+// Web Menu
+
+.padding-basic
+    padding: 0 $spacing-s
+    @include tablet-up
+        padding: 0 $spacing-m
+
+
+
+.lightmode
+    & .web-menu-desktop
+        color: $dark1
+
+
+
+.web-menu-desktop
+    transition: background $transition-s ease
+    display: none
+    @include tablet-up
+        height: 85px
+        position: absolute
+        z-index: 10
+        box-sizing: border-box
+        width: 100%
+        height: 60px
+        background-color: none
+        color: $dark1
+        display: flex
+        justify-content: center
+        & .content
+            box-sizing: border-box
+            width: $tablet
+            max-width: $tablet
+            overflow: hidden
+            display: flex
+            align-items: center
+            justify-content: space-between
+            padding: 0 $spacing-m
+            & .left
+                display: Flex
+                flex-direction: row
+                align-items: center
+                & .label
+                    color: $grey-dark
+                    font-weight: 500
+            & .right
+                display: flex
+                flex-direction: row
+                align-items: center
+            & .mixa
+                display: flex
+                align-items: center
+                & span
+                    font-weight: 700
+                    font-size: 1.2em
+            & .logo
+                margin-right: $spacing-xs
+                width: $dimension-xxs
+
+.web-menu-mobile
+    transition: background $transition-s ease
+    position: absolute
+    z-index: 10
+    width: 100vw
+    color: $dark1
+    & .head
+        box-sizing: border-box
+        width: 100%
+        height: 60px
+        overflow: hidden
+        display: flex
+        align-items: center
+        justify-content: space-between
+        padding: 0 $spacing-s
+        border-bottom: 1px solid $shadow-light
+        z-index: 5
+        & .right
+            height: 100%
+            display: flex
+            align-items: center
+        & .mixa
+            display: flex
+            align-items: center
+            & span
+                font-weight: 700
+                font-size: 1em
+        & .logo
+            margin-right: $spacing-xs
+            width: $dimension-xxs
+    & .body
+        height: 100%
+        z-index: 4
+        & .item-container
+            padding: $spacing-s
+            border-bottom: 1px solid $shadow-light
+
+    @include tablet-up
+        display: none
+
+
+.web-menu
+    .lightmode & 
+        & .web-menu-mobile
+            background-color: $light1
+        & .web-menu-desktop
+            background-color: $light1
+    .lightmode & .item
+            font-weight: 500
+            color: $grey-dark !important
+    .darkmode & 
+        & .web-menu-mobile
+            background-color: $light1
+        & .web-menu-desktop
+            background-color: $light1
+    .darkmode & .item
+            font-weight: 500
+            color: $grey-light !important
+
+.web-menu-transparent
+    & .web-menu-mobile
+        background: rgba(0,0,0,0)
+        & .head
+            border-bottom: 1px solid rgba(0,0,0,0)
+    & .web-menu-dektop
+        background-color: rgba(0,0,0,0)
+        & .content
+            border-bottom: 1px solid rgba(0,0,0,0)
+    & .web-menu-item
+        color: $light1
+    & .mixa
+        color: $light1
+    & .logo
+        svg
+            stroke: $light1
+            fill: $light1
+    & .item
+        color: $light1 !important
+        font-weight: 500
+

@@ -1,0 +1,347 @@
+@import "../base/config"
+
+.bc-test-img
+    background-image: url("https://images.pexels.com/photos/1805164/pexels-photo-1805164.jpeg")
+    background-size: cover
+    background-position: center
+
+.hide-scrollbar
+    -ms-overflow-style: none
+    scrollbar-width: none 
+    scrollbar-height: none
+    &::-webkit-scrollbar
+        display: none 
+
+.bc-blur
+    backdrop-filter: blur($back-blur)
+    background-color: rgba(225,225,225,0.6)
+    .darkmode &
+        background-color: rgba(24,24,24,0.3)
+
+.bc-transparent
+    background-color: rgba(0,0,0,0.05)
+    .darkmode &
+        background-color: rgba(255,255,255,0.1)
+
+@keyframes fromBottom
+    0%
+        margin-top: -$spacing-s        
+    100%
+        margin-top: 0     
+
+
+.l-c-r-menu
+    display: flex
+    flex-direction: row
+    align-items: center
+    width: 100%
+    transition: all .3s ease
+    .item-center
+        width: 100%
+        max-width: 100%
+        display: flex
+        align-items: center
+    .item-right
+        border-radius: $spacing-m
+    .item-left
+        border-radius: $spacing-m
+
+input
+    width: 100%
+    padding: $spacing-xs
+    background-color: rgba(0,0,0,0)
+
+.h-list
+    display: flex
+    flex-direction: row
+    align-items: center
+    width: 100%
+    max-width: 100%
+    overflow-x: scroll
+    overflow-y: hidden
+    @extend .hide-scrollbar
+
+//-------------------------------------
+
+.slide-menu
+    .lightmode &
+        @extend .bc-blur
+    .darkmode &
+        @extend .bc-blur
+    display: flex
+    flex-direction: column
+    justify-content: center
+    border-radius: $spacing-m
+    width: 100%
+    max-width: 100%
+    overflow: hidden
+    transition: all .3s ease
+    padding: $spacing-xs 0
+    button
+        color: $light1 !important
+    li
+        margin-right: $spacing-s
+    .item
+        padding: $spacing-xs $spacing-s
+        animation: fromBottom .3s ease
+        transition: all .3s ease
+.slide-menu-closed
+    padding: 0
+
+
+//-------------------------------------
+
+.mixa-logo
+    padding: 0
+    @extend .btn-plain
+    span
+        font-weight: 800
+        font-size: 1.2em
+    .top-menu-scrolled &
+        //@extend .btn-plain-tint
+
+.top-menu
+    z-index: 4
+    position: fixed
+    top: 0
+    width: 100%
+    min-height: 80px
+    display: flex
+    align-items: center
+    justify-content: center
+    transition: all .3s ease
+    @extend .bc-blur
+.top-menu-scrolled
+    box-shadow: rgb(0 0 0 / 8%) 0px 1px 12px !important
+
+.top-page-padding
+    @include mobile-l-up
+        padding-top: 80px
+    
+    
+//-------------------------------------
+
+.studio-menu
+    width: 100%
+    display: flex
+    align-items: center
+    justify-content: space-between
+    position: relative
+    .left
+        display: flex
+        left: 0
+        .mixa-logo
+            display: flex
+            span
+                display: block
+            @include mobile-l-up
+                span
+                    display: none
+            @include tablet-up
+                display: flex
+                span
+                    display: block
+    .center
+        display: none
+        position: absolute
+        left: 50%
+        transform: translate(-50%, 0)
+        @include mobile-l-up
+            display: block
+    .right
+        display: flex
+        right: 0
+        .go-pro
+            display: none
+            @include tablet-up
+                display: block
+
+
+//-------------------------------------
+
+.web-menu
+    .first-menu
+        margin-left: $spacing-s
+        @include tablet-up
+            margin-left: $spacing-m
+        display: none
+        @include mobile-l-up
+            display: flex
+    .login-btn
+        display: none
+        @include mobile-up
+            display: flex
+        @include mobile-l-up
+            display: none
+        @include tablet-up
+            display: flex
+    .hamburger
+        display: block
+        @include mobile-l-up
+            display: none
+        
+//-------------------------------------
+
+.app-menu
+    position: relative
+    display: flex
+    align-items: center
+    justify-content: space-around
+    width: 100%
+    max-width: 375px
+    min-width: 300px
+    svg
+        width: $icon-xl
+    @include mobile-l-up
+        svg
+            width: $icon-l
+
+//-------------------------------------
+
+.mobile-menu
+    z-index: 4
+    position: fixed
+    bottom: 0
+    left: 0
+    right: 0
+    width: 100%
+    height: 65px
+    display: flex
+    align-items: center
+    justify-content: center
+    padding: $spacing-xxs 0
+    background: $light1
+    border-top: 1px solid $shadow-light
+    .darkmode &
+        background: $dark1
+    @include mobile-l-up
+        display: none
+
+//-------------------------------------
+
+
+.grid-3-2-1
+    max-width: 100%
+
+    display: grid
+    grid-template-columns: 1fr
+    grid-template-rows: auto
+    grid-gap: $spacing-m
+    @include mobile-up
+        grid-template-columns: 1fr 1fr
+    @include tablet-up
+        grid-template-columns: 1fr 1fr 1fr
+
+
+//-------------------------------------
+
+
+.projectBox
+    width: 100%
+    min-height: 200px
+    border-radius: $spacing-s
+    overflow: hidden
+    background-color: $light1
+    @extend .bc-basic
+    .thumbnail
+        width: 100%
+        height: 200px
+        overflow: hidden
+        display: flex
+        align-items: center
+        justify-content: center
+        position: relative
+        img
+            min-width: 100%
+            min-height: 100%
+            cursor: pointer
+        .types
+            position: absolute
+            left: $spacing-m
+            bottom: $spacing-s
+            display: flex
+            .btn
+                margin-left: -$spacing-xs
+        .options
+            position: absolute
+            right: $spacing-m
+            top: $spacing-s
+    .info
+        width: 100%
+        padding: $spacing-m $spacing-m $spacing-s $spacing-m
+        .date
+            font-weight: 300 !important
+            margin-bottom: $spacing-xs
+        .title
+            overflow: hidden
+            white-space: nowrap
+            text-overflow: ellipsis
+            cursor: pointer
+    .action
+        width: 100%
+        padding: $spacing-s $spacing-m
+        display: flex
+        align-items: center
+        justify-content: space-between
+        border-top: 1px solid $shadow-light
+        cursor: pointer
+        &:hover
+            background: $light2
+
+
+.context-menu
+    @extend .bc-basic
+    border-radius: $spacing-xs
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: flex-start
+    padding: $spacing-xs $spacing-s 0 $spacing-s
+    .btn
+        margin-bottom: $spacing-xs
+
+//-------------------------------------
+
+.sticky-search
+    position: sticky
+    top: 0
+    @include tablet-up
+        top: 80px
+
+.sticky
+    position: sticky
+    top: 0
+    
+.max-d-l
+    max-width: $desktop-l !important
+    overflow: hidden
+
+.padding-frame
+    padding: 0 $spacing-s
+    max-width: 100%
+    @include mobile-up
+        padding: 0 $spacing-m
+    @include tablet-up
+        padding: 0 $spacing-l
+    @include desktop-xl-up
+        padding: 0
+
+.padding-frame-m
+    padding: 0
+    max-width: 100%
+    @include mobile-up
+        padding: 0 $spacing-m
+    @include tablet-up
+        padding: 0 $spacing-l
+    @include desktop-xl-up
+        padding: 0
+
+.padding-frame-full
+    padding: 0
+    max-width: 100%
+
+.text-c
+    text-align: center
+
+.text-truncate
+    text-overflow: ellipsis

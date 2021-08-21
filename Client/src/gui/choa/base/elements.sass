@@ -1,0 +1,649 @@
+@import  "config.sass"
+
+//Hide scroll-bar
+
+div::-webkit-scrollbar 
+    display: none
+    @include tablet-up
+        display: block
+
+// Hide scrollbar for IE, Edge and Firefox
+
+div 
+  -ms-overflow-style: none  /* IE and Edge */
+  scrollbar-width: none  /* Firefox */
+
+// width
+
+::-webkit-scrollbar 
+  width: $spacing-s
+  height: $spacing-s
+
+// Track
+
+::-webkit-scrollbar-track 
+    background: $light3
+    .darkmode &
+        background: $dark3
+// Handle
+
+.lightmode ::-webkit-scrollbar-thumb 
+    background: $grey-light
+    border-radius: $spacing-s
+    &:hover
+        background: $grey-dark
+.darkmode ::-webkit-scrollbar-thumb
+    background: $grey-dark
+    border-radius: $spacing-s 
+    &:hover
+        background: $grey-light
+// Font Weight
+
+.fw-
+    &1
+        font-weight: 100
+    &2
+        font-weight: 200
+    &3
+        font-weight: 300
+    &4
+        font-weight: 400
+    &5
+        font-weight: 500
+    &6
+        font-weight: 600
+    &7
+        font-weight: 700
+    &8
+        font-weight: 800
+    &9
+        font-weight: 900
+
+// Border Radius
+
+.br-a-
+    &xs
+        border-radius: $spacing-xs
+    &s
+        border-radius: $spacing-s
+    &m
+        border-radius: $spacing-m
+    &l
+        border-radius: $spacing-l
+.br-t-
+    &xs
+        border-radius: $spacing-xs $spacing-xs 0 0
+    &s
+        border-radius: $spacing-s $spacing-s 0 0
+    &m
+        border-radius: $spacing-m $spacing-m 0 0
+    &l
+        border-radius: $spacing-l $spacing-l 0 0
+
+.br-no
+    border-radius: 0 !important
+
+// Padding
+
+.p-
+    &a-xxs
+        padding: $spacing-xxs
+    &a-xs
+        padding: $spacing-xs
+    &a-s
+        padding: $spacing-s
+    &a-m
+        padding: $spacing-m
+    &a-l
+        padding: $spacing-l
+
+    &t-0
+        padding-top: 0 !important
+    &r-0
+        padding-right: 0 !important
+    &b-0
+        padding-bottom: 0 !important
+    &l-0
+        padding-left: 0 !important
+
+    &t-xs
+        padding-top: $spacing-xs
+    &r-xs
+        padding-right: $spacing-xs
+    &b-xs
+        padding-bottom: $spacing-xs
+    &l-xs
+        padding-left: $spacing-xs
+
+    &t-s
+        padding-top: $spacing-s
+    &r-s
+        padding-right: $spacing-s
+    &b-s
+        padding-bottom: $spacing-s
+    &l-s
+        padding-left: $spacing-s
+
+    &t-m
+        padding-top: $spacing-m
+    &r-m
+        padding-right: $spacing-m
+    &b-m
+        padding-bottom: $spacing-m
+    &l-m
+        padding-left: $spacing-m
+
+    &t-l
+        padding-top: $spacing-l
+    &r-l
+        padding-right: $spacing-l
+    &b-l
+        padding-bottom: $spacing-l
+    &l-l
+        padding-left: $spacing-l
+
+// Margin
+
+.m-a-s
+    margin: $spacing-xs
+.m-a-s
+    margin: $spacing-s
+.m-a-m
+    margin: $spacing-m
+.m-a-l
+    margin: $spacing-l
+
+.m-t-xs
+    margin-top: $spacing-xs
+.m-r-xs
+    margin-right: $spacing-xs
+.m-b-xs
+    margin-bottom: $spacing-xs
+.m-l-xs
+    margin-left: $spacing-xs
+
+.m-t-s
+    margin-top: $spacing-s
+.m-r-s
+    margin-right: $spacing-s
+.m-b-s
+    margin-bottom: $spacing-s
+.m-l-s
+    margin-left: $spacing-s
+
+.m-t-m
+    margin-top: $spacing-m
+.m-r-m
+    margin-right: $spacing-m
+.m-b-m
+    margin-bottom: $spacing-m
+.m-l-m
+    margin-left: $spacing-m
+
+.m-t-l
+    margin-top: $spacing-l
+.m-r-l
+    margin-right: $spacing-l
+.m-b-l
+    margin-bottom: $spacing-l
+.m-l-l
+    margin-left: $spacing-l
+
+// position
+
+.absolute
+    position: absolute
+.relative
+    position: relative
+.fixed
+    position: fixed
+.text-no-wrap
+    white-space: nowrap
+.in-block
+    display: inline-block
+.block
+    display: block
+.no-over
+    overflow: hidden
+.no-over-x
+    overflow-x: hidden
+.no-over-y
+    overflow-y: hidden
+.scroll-x
+    overflow-x: scroll
+.scroll-y
+    overflow-y: scroll
+.point
+    cursor: pointer
+.point-move-x
+    cursor: ew-resize
+.point-move
+    cursor: move
+.point-grab
+    cursor: grab
+.z-1
+    z-index: -1
+.z0
+    z-index: 0
+.z1
+    z-index: 1
+.z2
+    z-index: 2
+.z3
+    z-index: 3
+.z4
+    z-index: 4
+.z5
+    z-index: 5
+.z6
+    z-index: 6
+.bottom0
+    bottom: 0
+.top0
+    top: 0
+.left0
+    left: 0
+.right0
+    right: 0
+
+// display
+.no-mobile-up
+    @include mobile-up
+        display: none !important
+.no-mobile-l-up
+    @include mobile-l-up
+        display: none !important
+.no-tablet-up
+    @include tablet-up
+        display: none !important
+.no-desktop-up
+    @include desktop-up
+        display: none !important
+.only-tablet-up
+    @include tablet-down
+        display: none
+
+
+// width, height
+
+.full-h
+    height: 100%
+.full-w
+    width: 100%
+.full-vh
+    height: 100vh
+.full-vw
+    width: 100vw
+
+// boxes
+
+.box-f-square
+    width: 100%
+    height: 100%
+.box-f-w
+    width: 100%
+.box-f-h
+    height: 100%
+
+.box-xxs
+    width: $dimension-xxs
+.box-xs
+    width: $dimension-xs
+.box-s
+    width: $dimension-s
+.box-m
+    width: $dimension-m
+.box-l
+    width: $dimension-l
+.box-xl
+    width: $dimension-xl
+.box-xxl
+    width: $dimension-xxl
+
+.box-h-xxxs
+    height: $dimension-xxxs
+.box-h-xxs
+    height: $dimension-xxs
+.box-h-xs
+    height: $dimension-xs
+.box-h-s
+    height: $dimension-s
+.box-h-m
+    height: $dimension-m
+.box-h-l
+    height: $dimension-l
+.box-h-xl
+    height: $dimension-xl
+.box-h-xxl
+    height: $dimension-xxl
+
+.box-xxs-square
+    width: $dimension-xxxs
+    height: $dimension-xxxs
+.box-xxs-square
+    width: $dimension-xxs
+    height: $dimension-xxs
+.box-xs-square
+    width: $dimension-xs
+    height: $dimension-xs
+.box-s-square
+    width: $dimension-s
+    height: $dimension-s
+.box-m-square
+    width: $dimension-m
+    height: $dimension-m
+.box-l-square
+    width: $dimension-l
+    height: $dimension-l
+
+// Flex Layout
+
+.max-w-l
+    max-width: $desktop
+
+.flex
+    display: flex
+
+.flex-h
+    display: flex
+    flex-direction: row
+.flex-v
+    display: flex
+    flex-direction: column
+.flex-wrap
+    display: flex
+    flex-wrap: wrap
+.flex-no-wrap
+    display: flex
+    flex-wrap: nowrap
+.flex-sb
+    display: flex
+    justify-content: space-between
+    align-items: center
+.flex-c
+    display: flex
+    justify-content: center
+    align-items: center
+.flex-jc-c
+    display: flex
+    justify-content: center
+.flex-ai-c
+    display: flex
+    align-items: center
+.flex-sa
+    display: flex
+    justify-content: space-around
+    align-items: center
+
+// Limits
+.max-ch
+    display: inline-block
+    white-space: nowrap
+    overflow: hidden
+    text-overflow: ellipsis
+    &-xs
+        @extend .max-ch
+        max-width: 8ch
+    &-s
+        @extend .max-ch
+        max-width: 12ch
+    &-m
+        @extend .max-ch
+        max-width: 16ch
+
+// Background colors
+
+.bc-
+    &tint
+        background-color: $accent1
+    &tint-t
+        background-color: $accent1-trasparent
+    &red
+        background-color: $red
+    &pink
+        background-color: $pink
+    &blue
+        background-color: $blue
+    &teal
+        background-color: $teal
+    &green
+        background-color: $green
+    &orange
+        background-color: $orange
+    &yellow
+        background-color: $yellow
+    &purple
+        background-color: $purple
+    &indigo
+        background-color: $indigo
+    &brown
+        background-color: $brown
+    &none
+        background: none !important
+    &basic   
+        background-color: $light1
+        box-shadow: 0px 4px 16px 2px $shadow-light
+        .darkmode &
+            background-color: $dark1
+            border: 1px solid $dark2
+.tc-
+    &tint
+        color: $accent1
+    &tint-t
+        color: $accent1-trasparent
+    &red
+        color: $red
+    &pink
+        color: $pink
+    &blue
+        color: $blue
+    &teal
+        color: $teal
+    &green
+        color: $green
+    &orange
+        color: $orange
+    &yellow
+        color: $yellow
+    &purple
+        color: $purple
+    &indigo
+        color: $indigo
+    &brown
+        color: $brown
+
+.ic-
+    &tint
+        svg
+            fill: $accent1
+            stroke: $accent1
+    &tint-t
+        svg
+            fill: $accent1-trasparent
+            stroke: $accent1-trasparent
+    &red
+        svg
+            fill: $red
+            stroke: $red
+    &pink
+        svg
+            fill: $pink
+            stroke: $pink
+    &blue
+        svg
+            fill: $blue
+            stroke: $blue
+    &teal
+        svg
+            fill: $teal
+            stroke: $teal
+    &green
+        svg
+            fill: $green
+            stroke: $green
+    &orange
+        svg
+            fill: $orange
+            stroke: $orange
+    &yellow
+        svg
+            fill: $yellow
+            stroke: $yellow
+    &purple
+        svg
+            fill: $purple
+            stroke: $purple
+    &indigo
+        svg
+            fill: $indigo
+            stroke: $indigo
+    &brown
+        svg
+            fill: $brown
+            stroke: $brown
+
+    
+
+
+
+    
+// Project Box
+.p-box-grid
+    display: grid
+    grid-template-columns: 1fr
+    grid-template-rows: 85% 15%
+
+// Grid
+
+.grid-double-v
+    box-sizing: border-box
+    display: grid
+    grid-auto-rows: 2fr 1fr
+    grid-template-columns: 1fr
+
+.grid-l
+    box-sizing: border-box
+    display: grid
+    grid-auto-rows: minmax(250px, 250px)
+    grid-template-columns: repeat(2, 1fr)
+    grid-auto-flow: dense
+    @include mobile-up
+        grid-template-columns: repeat(2,1fr)
+    @include mobile-l-up
+        grid-template-columns: repeat(3, 1fr)
+        grid-auto-rows: minmax(300px, 400px)
+    @include tablet-up
+        grid-template-columns: repeat(4, 1fr)
+    @include desktop-up
+        grid-template-columns: repeat(4, 1fr)
+    
+.grid-editor
+    grid-template-columns: 1fr 1fr
+    grid-template-rows: 1fr
+
+.grid-gap-s
+    grid-gap: $spacing-s
+
+.grid-span2
+    grid-column: span 2
+
+// App page styles
+
+.templates-grid
+    display: grid
+    grid-auto-flow: dense
+    grid-gap: $spacing-s
+    grid-template-columns: repeat(2, 1fr)
+    grid-auto-rows: 120px
+    @include mobile-up
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr))
+        grid-auto-rows: minmax(200px, 200px)
+
+
+// Non standard
+
+.draggerMenuBar
+    .lightmode &
+        background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(255,255,255,1) 80%)
+    .darkmode &
+        background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(42,43,61,1) 80%)
+
+.actionMenuContainer
+    position: absolute
+    top: 0
+    left: 0    
+    width: 100vw
+    height: 100vh
+    overflow: hidden
+    display: flex
+    align-items: center
+    justify-content: center
+    background-color: $shadow-dark
+    .actionMenuContent
+        position: absolute
+        bottom:0 
+        width: 100%
+        background-color: $dark2
+        border-radius: $spacing-m $spacing-m 0 0
+        overflow: hidden
+    .scroller
+
+    @include mobile-up
+
+    @include mobile-l-up
+        .actionMenuContent
+            position: relative
+            background-color: $dark2
+            border-radius: $spacing-s
+            width: 90vw
+            max-height: 90vh
+            max-width: $desktop
+
+    @include tablet-up
+        
+    @include desktop-up
+
+// Editor
+
+.g-t-accent //gradient top accent
+    background: linear-gradient(0deg, rgba(255,255,255,0) 0%, $accent1 70%)
+
+.bs-accent1-t //box shadow accent1
+    box-shadow: 0px 0px 15px 3px $accent1-trasparent
+
+.b-xxxs-accent1
+    border: $spacing-xxxs solid $accent1
+
+.timeline
+    width: 100%
+.t
+    display: flex
+    flex-direction: row
+    flex-wrap: nowrap
+
+.t-l
+    @extend .t
+    
+.t-v
+    height: 50px
+    border-radius: $spacing-xxs
+    margin: 0.2rem 0 0.2rem 0
+    flex-direction: column
+    @extend .t
+
+.t-m-
+    height: 20px
+    background-color: $grey-light
+    border-radius: $spacing-xxs
+    margin: 0.2rem 0 0.2rem 0
+    @extend .t
+
+.t-select
+    position: absolute
+    top: 0
+    height: 100%
+    background-color: #FF6555
+    border-radius: $spacing-xs
+    color: white
+    cursor: pointer
+    z-index: 90

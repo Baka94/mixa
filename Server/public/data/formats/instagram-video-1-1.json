@@ -1,0 +1,11 @@
+{
+    "id" : "instagram-video-1-1",
+    "name" : "Instagram Video",
+    "aspect-rateo": "1:1",
+    "details": "Square",
+    "thumbnail": "",
+    "icon": "instagram",
+    "cateogry": ["video", "social", "square"],
+    "baseX" : 1080,
+    "baseY": 1080
+}

@@ -1,0 +1,11 @@
+{
+    "id" : "report-a4",
+    "name" : "Report",
+    "aspect-rateo": "A4",
+    "details": "21 x 29.7 cm",
+    "thumbnail":"",
+    "icon": "document",
+    "cateogry": ["document", "professional", "business", "print"],
+    "baseX" : 793.70,
+    "baseY": 1122.52
+}

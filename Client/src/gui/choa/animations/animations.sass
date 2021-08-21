@@ -1,0 +1,98 @@
+
+@import "../base/config"
+
+.t-s
+    transition: all $transition-s ease
+.t-m
+    transition: all $transition-m ease
+.t-l
+    transition: all $transition-l ease
+
+.show-on-hover
+    opacity: 0
+
+.up-on-hover
+    margin-bottom: 0
+
+.hover-trigger:hover
+    .show-on-hover
+        opacity: 1
+    .up-on-hover
+        margin-bottom: $spacing-s
+
+
+    
+.border-select
+    border: 0px solid white
+    transition: border .1s
+.border-select-trigger:hover .border-select
+    border: 3px solid white
+
+.hover-scale-s:hover
+    transform: scale(1.03)
+
+.hover-up
+    margin-bottom: 0rem
+    transition: margin .3s ease
+.hover-up-trigger:hover .hover-up
+    margin-bottom: .5rem
+
+
+.show-from-top
+    animation: show-from-top $transition-s forwards
+.hide-to-top
+    animation: hide-to-top $transition-s forwards
+
+@keyframes show-from-top
+    0%
+        margin-top: -$spacing-s
+        display: block
+        opacity: 0
+    100%
+        margin-top: 0 
+        display: block
+        opacity: 1
+
+@keyframes hide-to-top
+    0%
+        margin-top: 0
+        display: block
+        opacity: 1
+    99%
+        margin-top: -$spacing-s 
+        display: block
+        opacity: 0
+    100%
+        margin-top: $spacing-s 
+        display: none
+        opacity: 0
+
+
+.show-from-right
+    animation: show-from-right $transition-s forwards
+.hide-to-right
+    animation: hide-to-right $transition-s forwards
+
+@keyframes show-from-right
+    0%
+        margin-left: -$spacing-s
+        display: block
+        opacity: 0
+    100%
+        margin-left: 0 
+        display: block
+        opacity: 1
+
+@keyframes hide-to-right
+    0%
+        margin-left: 0
+        display: block
+        opacity: 1
+    99%
+        margin-left: -$spacing-s 
+        display: block
+        opacity: 0
+    100%
+        margin-left: $spacing-s 
+        display: none
+        opacity: 0

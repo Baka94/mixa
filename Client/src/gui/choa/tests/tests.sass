@@ -1,0 +1,69 @@
+
+@import "../base/config"
+
+
+
+.no-stroke
+    svg
+        stroke: none !important
+.no-fill
+    svg
+        fill: none !important
+
+.testContainer
+
+    @include tablet-up
+        display: grid
+        grid-template-rows: 1fr
+        grid-template-columns: 50% 50%
+
+.lightmode
+    background-color: $light1
+    h1,h2,h3,h4,h5,h6,p,div,input
+        //color: inherit
+
+.darkmode
+    background-color: $dark1
+    h1,h2,h3,h4,h5,h6,p,div,input
+        //color: inherit
+
+.bc-t
+    .lightmode &
+        background-color: $shadow-light
+    .darkmode &
+        background-color: $shadow-dark
+
+.bc-1
+    .lightmode &
+        background-color: $light1
+    .darkmode &
+        background-color: $dark1
+.bc-2
+    .lightmode &
+        background-color: $light2
+    .darkmode &
+        background-color: $dark2
+.bc-3
+    .lightmode &
+        background-color: $light3
+        box-shadow: 0px 6px 18px 0px $shadow-light
+    .darkmode &
+        background-color: $dark3
+        box-shadow: 0px 12px 18px 2px $shadow-dark 
+.bc-b
+    backdrop-filter: blur($spacing-s)
+    background-color: rgba(255,255,255,0.1)
+    //border-top: 1px solid rgba(255,255,255,0.1)
+    //border-left: 1px solid rgba(255,255,255,0.1)
+    //border-right: 1px solid rgba(0,0,0,0.05)
+    //border-bottom: 1px solid rgba(0,0,0,0.05)
+    .lightmode &
+
+    .darkmode &
+
+.bc-4
+    .lightmode &
+        border: 1px solid $grey-light
+    .darkmode &
+        background-color: $dark1
+        border: 1px solid $grey-dark

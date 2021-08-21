@@ -1,0 +1,162 @@
+
+@import  "config.sass"
+
+button, .btn
+    font-family: $primary-font
+    font-size: 1em
+    box-sizing: border-box
+    display: flex
+    align-items: center
+    font-weight: 400
+    padding: $spacing-xs
+    cursor: pointer
+    border-radius: $spacing-m
+    white-space: nowrap
+    svg
+        width: 1em
+    &:hover
+        opacity: 0.75
+
+.btn-p
+    padding: $spacing-xs $spacing-s !important
+
+.btn
+    &-xs
+        svg
+            width: $icon-xs
+    &-s
+        svg
+            width: $icon-s
+    &-l
+        svg
+            width: $icon-l
+    &-xl
+        svg
+            width: $icon-xl
+    &-xxl
+        svg
+            width: $icon-xxl
+
+.btn-plain
+    font-weight: 600
+    .darkmode &
+        color: $light1
+    &-tint
+        @extend .btn-plain
+        color: $accent1 !important
+        svg
+            fill: $accent1 !important
+            stroke: $accent1 !important
+
+.btn-arrow   
+    font-weight: 600
+    &-tint
+        @extend .btn-arrow
+        color: $accent1 !important
+        svg
+            fill: $accent1 !important
+            stroke: $accent1 !important
+
+.btn-basic   
+    background-color: $light1
+    color: $dark1
+    box-shadow: 0px 4px 16px 2px $shadow-light
+    svg
+        fill: $dark1
+        stroke: $dark1
+    .darkmode &
+        background-color: $dark3
+        color: $light1
+        box-shadow: 0px
+        svg
+            fill: $light1
+            stroke: $light1
+    &-tint
+        @extend .btn-basic
+        color: $accent1 !important
+        svg
+            fill: $accent1 !important
+            stroke: $accent1 !important
+    
+.btn-stroke
+    border: 1px solid $dark3 !important
+    color: $dark3 !important
+    svg
+        fill: $dark3
+        stroke: $dark3
+    .darkmode &
+        border: 1px solid $light3 !important
+        color: $light3
+        svg
+            fill: $light3
+            stroke: $light3
+    &-tint
+        border: 1px solid $accent1
+        color: $accent1
+        svg
+            fill: $accent1
+            stroke: $accent1
+
+.btn-tinted
+    font-weight: 600
+    background-color: $light3
+    opacity: 0.75
+    color: $grey-light
+    svg
+        fill: $grey-dark
+        stroke: $grey-dark
+    .darkmode &
+        background-color: $dark3
+        color: $grey-dark
+        svg
+            fill: $grey-light
+            stroke: $grey-light
+    &-tint
+        background-color: $accent1
+        color: $light1
+        svg
+            fill: $light1
+            stroke: $light1
+
+.btn-grey
+    font-weight: 600
+    color: $grey-dark
+    svg
+        fill: $grey-dark
+        stroke: $grey-dark
+    .darkmode &
+        color: $light3
+        svg
+            fill: $light3
+            stroke: $light3
+    
+.btn-filled
+    background: $dark1
+    color: $light1
+    svg
+        fill: $light1
+        stroke: $light1
+    .darkmode &  
+        background: $light1
+        color: $dark1
+        svg
+            fill: $dark2
+            stroke: $dark2
+    &-tint
+        background-color: $accent1
+        color: $light1
+        svg
+            fill: $light1
+            stroke: $light1
+
+.btn-profile
+    padding: 0.25em
+    img
+        width: 1.8em
+        height: 1.8em
+        border-radius: $spacing-m
+        overflow: hidden
+    .darkmode &  
+        
+    &-tint
+        
